@@ -1,0 +1,11 @@
+[21:09:37 2026-08-29] FETCHING Version 2.44.0
+[21:09:37 2026-08-29] CREATING /home/aram/.spicetify
+[21:09:37 2026-08-29] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.44.0/spicetify-2.44.0-linux-amd64.tar.gz
+[21:10:01 2026-08-29] EXTRACTING /home/aram/.spicetify/spicetify.tar.gz
+[21:10:01 2026-08-29] SETTING EXECUTABLE PERMISSIONS TO /home/aram/.spicetify/spicetify
+[21:10:01 2026-08-29] REMOVING /home/aram/.spicetify/spicetify.tar.gz
+[21:10:01 2026-08-29] APPENDING /home/aram/.spicetify to PATH in /home/aram/.bashrc
+[21:10:01 2026-08-29] spicetify v2.44.0 was installed successfully to /home/aram/.spicetify
+[21:10:01 2026-08-29] Open a new terminal or reload your shell profile to use spicetify:
+[21:10:01 2026-08-29]   source "/home/aram/.bashrc"
+[21:10:01 2026-08-29] Then run 'spicetify --help' to get started
