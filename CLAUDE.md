@@ -41,7 +41,10 @@ Entry point is `./main.sh`:
   accent, dropped into `~/.config/zed/themes/` with `settings.json`'s
   `theme` block pointed at it) (`modules/app-themes.sh`)
 - `./main.sh grub` - adds `loglevel=3` to `GRUB_CMDLINE_LINUX_DEFAULT` to
-  quiet kernel boot log spam, then runs `update-grub` (`modules/grub.sh`)
+  quiet kernel boot log spam, then installs the Particle Circle sidebar GRUB
+  theme from `PurpleHallos/Particle-circle-grub-theme` (sidebar variant,
+  `1600p` screen size for this machine's 2560x1600 panel) into
+  `/usr/share/grub/themes`, then runs `update-grub` (`modules/grub.sh`)
 - `./main.sh all` - all of the above, in that order
 - `--dry-run` (or `DRYRUN=1`) on any target prints every mutating command
   instead of running it
@@ -57,9 +60,10 @@ purges anything; `SKIP_SNAPSHOT=1` overrides that gate.
   shim/MOK signing - keep it that way unless there's a real need, since
   anything unsigned there won't load. `modules/grub.sh` is the one exception
   to "don't touch GRUB", and deliberately a narrow one: it only edits
-  `GRUB_CMDLINE_LINUX_DEFAULT` (a plain text boot parameter), never anything
-  that needs to be signed - keep any future GRUB changes to that same
-  category.
+  `GRUB_CMDLINE_LINUX_DEFAULT` (a plain text boot parameter) and installs a
+  GRUB theme (background/fonts/`theme.txt` - plain data grub reads at boot,
+  not a boot-chain binary) - never anything that needs to be signed. Keep any
+  future GRUB changes to that same category.
 - Three out-of-tree Wi-Fi drivers already run via DKMS (`8812au`,
   `broadcom-sta`, `rtl8821cu`), already rebuilding/signing fine across kernel
   upgrades. A `debloat` run's `full-upgrade` can pull in a new kernel, which
